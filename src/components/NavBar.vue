@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed bg-fondo w-full h-14 md:h-20">
+  <nav class="fixed bg-fondo w-full h-14 md:h-20 z-5">
     <div class="flex justify-between items-center h-14 px-4 md:hidden">
       <Icon class="h-6"/>
       <transition>

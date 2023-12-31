@@ -1,7 +1,7 @@
 <template>
     <transition>
-        <div class="fixed bottom-0 group-container h-28 w-full rounded-t-[2rem] sombra transition-all duration-700 ease-in-out" :class="{ 'translate-y-28':  mostrar }">
-            <div class="fixed bottom-0 bg-blanco h-[7rem] w-full rounded-t-[2rem]   z-10">
+        <div class="fixed bottom-0 group-container h-28 w-full rounded-t-[2rem] sombra transition-all duration-700 ease-in-out z-5 " :class="{ 'translate-y-28':  mostrar }">
+            <div class="fixed bottom-0 bg-blanco h-[7rem] w-full rounded-t-[2rem]  z-10 ">
                 <div class="ancho-personalizado mx-auto my-[1.2rem]">
                     <ButtonMeeting />
                 </div>
@@ -9,7 +9,7 @@
             </div>
 
 
-            <div class="relative bg-blanco w-12 md:w-20 h-12 md:h-20 rounded-full -top-6 md:-top-10 mx-auto z-0 sombra text-2xl md:text-4xl flex flex-col" @click="toggleButton">
+            <div class="relative bg-blanco w-12 md:w-20 h-12 md:h-20 rounded-full -top-6 md:-top-10 mx-auto z-0 sombra text-2xl md:text-4xl flex flex-col cursor-pointer" @click="toggleButton">
                 <i class="ri-arrow-down-s-line my-1 md:mt-2 mx-3 md:mx-[22px] transition-all duration-700 ease-in-out" :class="{'rotate-180 my-0' : mostrar}"></i>
             </div>
         </div>

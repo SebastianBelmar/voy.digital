@@ -7,7 +7,7 @@
   <FloatingButton />
 </template>
 <script setup>
-import { defineAsyncComponent, onMounted, ref } from 'vue'
+import { defineAsyncComponent, ref } from 'vue'
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'));
 const SideBar = defineAsyncComponent(() => import('@/components/SideBar.vue'));
 const FloatingButton = defineAsyncComponent(() => import('@/components/FloatingButton.vue'));

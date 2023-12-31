@@ -1,9 +1,9 @@
 <template>
     <Transition name="close">
-        <i v-show="open" @click="emitCloseEvent" class="fixed top-0 right-0 p-3 text-3xl cursor-pointer ri-close-line z-10 md:hidden"></i>
+        <i v-show="open" @click="emitCloseEvent" class="fixed top-0 right-0 p-3 text-3xl cursor-pointer ri-close-line z-100 md:hidden"></i>
     </Transition>
     <Transition name="menu">
-        <nav v-show="open" class="fixed w-80 h-[100vh] rounded-r-2xl bg-blanco z-50 md:hidden shadow-xl shadow-sombra">
+        <nav v-show="open" class="fixed w-80 h-[100vh] rounded-r-2xl bg-blanco z-50 md:hidden shadow-xl shadow-sombra z-200">
             <Logo />
 
             <div class="w-40 mr-4 h-20 justify-center bg-medio-claro flex  items-center">
@@ -26,7 +26,7 @@
         </nav>
     </Transition>
     <Transition name="fondo">
-        <div  v-show="open" @click="emitCloseEvent" class="bg-oscuro fixed w-full h-[100%] opacity-20 md:hidden"></div>
+        <div  v-show="open" @click="emitCloseEvent" class="bg-oscuro fixed w-full h-[100%] opacity-20 md:hidden z-10"></div>
     </Transition>
 </template>
 

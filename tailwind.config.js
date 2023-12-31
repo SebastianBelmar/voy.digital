@@ -28,10 +28,10 @@ export default {
 
     extend: {
       fontFamily: {
-        sans: ['Graphik', 'sans-serif'],
+        // sans: ['Graphik', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
-        unbounded: ['Unbounded', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
+        // unbounded: ['Unbounded', 'sans-serif'],
+        // serif: ['Merriweather', 'serif'],
       },
     },
   },
