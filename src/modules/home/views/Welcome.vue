@@ -1,11 +1,18 @@
 <template>
-  <h1 class="font-unbounded text-4xl">Welcome</h1>
+  <Inicio />
+  <Servicios />
+  <Equipo />
+  <Portafolio />
+  <Testimonios />
 </template>
 
-<script>
-export default {
+<script setup>
+import Inicio from './../components/Inicio.vue';
+import Servicios from './../components/Servicios.vue';
+import Equipo from './../components/Equipo.vue';
+import Portafolio from './../components/Portafolio.vue';
+import Testimonios from './../components/Testimonios.vue';
 
-}
 </script>
 
 <style>
