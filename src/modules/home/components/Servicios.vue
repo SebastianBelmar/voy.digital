@@ -31,7 +31,7 @@
     
             <Accordion >
                 <template #imagen>
-                    <img src="https://media.istockphoto.com/id/1573329496/es/foto/multi-capas-de-textura-de-color-3d-papercut-capas-en-banner-vectorial-degradado-arte-de.jpg?b=1&s=170667a&w=0&k=20&c=gAcCK6KmiKBrJ__opmrqddHsnltEXWNyULm33zFy7Wg=" alt="imagen"
+                    <img src="https://images.unsplash.com/photo-1604311795833-25e1d5c128c6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8OSUzQTE2fGVufDB8fDB8fHww" alt="imagen"
                     class="scale-125 translate-y-2">
                 </template>
                 <template #numero>

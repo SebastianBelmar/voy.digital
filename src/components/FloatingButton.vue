@@ -10,7 +10,7 @@
 
 
             <div class="relative bg-blanco w-12 md:w-20 h-12 md:h-20 rounded-full -top-6 md:-top-10 mx-auto z-0 sombra text-2xl md:text-4xl flex flex-col cursor-pointer" @click="toggleButton">
-                <i class="ri-arrow-down-s-line my-1 md:mt-2 mx-3 md:mx-[22px] transition-all duration-700 ease-in-out" :class="{'rotate-180 my-0' : mostrar}"></i>
+                <i class="ri-arrow-down-s-line my-1 md:mt-2 mx-3 md:mx-[22px] transition-transform duration-700 ease-in-out" :class="{'rotate-180 my-0' : mostrar}"></i>
             </div>
         </div>
     </transition>
