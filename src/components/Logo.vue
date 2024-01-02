@@ -1,5 +1,5 @@
 <template>
-    <img class="cursor-pointer" src="./../assets/logo.PNG" alt="logo" @click="goToWelcome">
+    <img class="cursor-pointer" src="./../assets/logo.svg" alt="logo" @click="goToWelcome">
 </template>
   
 <script setup>
