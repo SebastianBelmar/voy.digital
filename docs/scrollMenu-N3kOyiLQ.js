@@ -1,0 +1,1 @@
+const t=s=>{if(!s)return;const f=s.offsetTop;window.scrollTo({top:f,behavior:"smooth"})},r=(s,f,e)=>{const l=window.scrollY;for(let o=0;o<5;o++)o==0?l<e[1].offsetTop&&(f.value="active1"):o<4?l>=e[o].offsetTop&&l<e[o+1].offsetTop&&(f.value=`active${o+1}`):l>=e[4].offsetTop&&(f.value="active5")};export{r as h,t as s};
