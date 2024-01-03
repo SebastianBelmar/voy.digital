@@ -1,1 +1,0 @@
-import{o as e,c as t,x as r}from"./index-rqQWErVB.js";const c="https://github.com/SebastianBelmar/voy.digital/assets/logo-w4Cz797l.svg",m={__name:"Logo",setup(a){const o=()=>{r().push({name:"welcome",params:{}})};return(s,n)=>(e(),t("img",{class:"cursor-pointer",src:c,alt:"logo",onClick:o}))}};export{m as _};
