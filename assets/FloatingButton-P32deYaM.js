@@ -1,0 +1,7 @@
+import{r,o as l,c as m,a as o,T as i,b as t,n as a,u as d,F as u,d as c,_}from"./index-oOaCXWiX.js";const p={class:"fixed bottom-0 h-28 md:h-36 w-full z-5 pointer-events-none"},x={class:"fixed bottom-0 bg-blanco h-[7rem] md:h-36 w-full sm:w-[480px] rounded-t-[2rem] z-10"},f={class:"ancho-personalizado mx-auto my-[1.2rem] pointer-events-auto"},g={__name:"FloatingButton",setup(v){const s=c(()=>_(()=>import("./ButtonMeeting-HJLiV9mE.js"),__vite__mapDeps([0,1,2]))),e=r(!0),n=()=>{e.value=!e.value};return(h,b)=>(l(),m(u,null,[o(i),t("div",p,[t("div",{class:a(["abosulte bottom-0 h-28 md:h-36 w-full sm:w-[480px] mx-auto rounded-t-[2rem] sombra transition-all duration-700 ease-in-out z-5",{"translate-y-28 md:translate-y-36":e.value}])},[t("div",x,[t("div",f,[o(d(s))])]),t("div",{class:"relative bg-blanco w-12 md:w-20 h-12 md:h-20 rounded-full -top-6 md:-top-10 mx-auto z-0 sombra text-2xl md:text-4xl flex flex-col cursor-pointer pointer-events-auto",onClick:n},[t("i",{class:a(["ri-arrow-down-s-line my-1 md:mt-2 mx-3 md:mx-[22px] transition-transform duration-700 ease-in-out",{"rotate-180 my-0":e.value}])},null,2)])],2)])],64))}};export{g as default};
+function __vite__mapDeps(indexes) {
+  if (!__vite__mapDeps.viteFileDeps) {
+    __vite__mapDeps.viteFileDeps = ["assets/ButtonMeeting-HJLiV9mE.js","assets/index-oOaCXWiX.js","assets/index-uKNHXMS2.css"]
+  }
+  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
+}
