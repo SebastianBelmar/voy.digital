@@ -6,7 +6,7 @@
 
             <div class="flex flex-wrap w-full mt-4 max-w-[1200px] mx-auto">
                 <div class="flex-shrink-0 w-full md:w-1/2 xl:w-1/3 p-4">
-                    <Accordion numero="1" subtitulo="Desarrollo de" titulo="Manual de Marca" :imagen="imagen1">
+                    <Accordion numero="1" subtitulo="Desarrollo de" titulo="Manual de Marca" :imagen="image1">
                         
                                             
                         <template #titulo-inferior>
@@ -21,7 +21,7 @@
                     </Accordion>
                 </div>
                 <div class="flex-shrink-0 w-full md:w-1/2 xl:w-1/3 p-4">
-                    <Accordion numero="2" subtitulo="Desarrollo de" titulo="Sitio web" :imagen="imagen2">
+                    <Accordion numero="2" subtitulo="Desarrollo de" titulo="Sitio web" :imagen="image2">
                         
                         <template #titulo-inferior>
                             Este es el SEGUNDO PASO para optimizar tu comunicación
@@ -35,7 +35,7 @@
                     </Accordion>
                 </div>
                 <div class="flex-shrink-0 w-full md:w-1/2 xl:w-1/3 p-4">
-                    <Accordion numero="3" subtitulo="Creación de" titulo="Videos para tus redes" :imagen="imagen3">
+                    <Accordion numero="3" subtitulo="Creación de" titulo="Videos para tus redes" :imagen="image3">
                         
                         <template #titulo-inferior>
                             Este es el TERCER PASO para optimizar tu comunicación
@@ -55,13 +55,13 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, ref } from 'vue';
+import { defineAsyncComponent } from 'vue';
+
+import image1 from '@/assets/ServiviosMarca.png'
+import image2 from '@/assets/ServiviosWeb.png'
+import image3 from '@/assets/ServiviosVideo.png'
+
 
 const Accordion = defineAsyncComponent(() => import('./Accordion.vue'));
 
-
-const imagen1 = './../../../../public/assets/ServiviosMarca.png'
-const imagen2 = './../../../../public/assets/ServiviosWeb.png'
-
-const imagen3 = './../../../../public/assets/ServiviosVideo.png'
 </script>

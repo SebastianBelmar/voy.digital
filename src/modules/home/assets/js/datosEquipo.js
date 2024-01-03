@@ -1,21 +1,23 @@
+import felipe from '@/assets/felipe.png'
+
 export const equipo = [
     {
-        image: './../../../../public/assets/felipe.png',
+        image: felipe,
         name: 'Felipe Belmar',
         position: 'CEO'
     },
     {
-        image: './../../../../public/assets/felipe.png',
+        image: felipe,
         name: 'Marcia Cruz',
         position: 'CM'
     },
     {
-        image: './../../../../public/assets/felipe.png',
+        image: felipe,
         name: 'Sebastián Belmar',
         position: 'CTO'
     },
     {
-        image: './../../../../public/assets/felipe.png',
+        image: felipe,
         name: 'María Jesus',
         position: 'Creative Director'
     },
