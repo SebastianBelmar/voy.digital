@@ -1,6 +1,6 @@
 <template>
     <div class=" w-full flex justify-center h-96 p-2">
-        <div class="bg-claro w-[25rem] h-80 rounded-3xl flex flex-col justify-between px-8 pt-8 pb-6">
+        <div class="bg-fondo w-[25rem] h-80 rounded-3xl flex flex-col justify-between px-8 pt-8 pb-6">
             
             <div class="text-base text-left" v-text="texto">
             </div>

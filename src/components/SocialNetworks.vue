@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-4 ">
+  <div class="flex gap-6 ">
     <a  href="https://www.instagram.com" target="_blank" class="text-[42px] hover:scale-110 transition-all duration-300 ease-in-out">
         <i class="ri-instagram-line" ></i>
     </a>

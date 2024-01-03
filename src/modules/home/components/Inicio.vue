@@ -8,7 +8,7 @@
                 <span>DIGITALES</span> 
             </h2>
 
-            <h3 class="text-xl md:text-4xl xl:text-5xl font-semibold">Optimizamos tu presencia digital</h3>
+            <h3 class="text-;g sm:text-xl md:text-4xl xl:text-5xl font-semibold">Optimizamos tu presencia digital</h3>
             <div class="w-80 md:hidden">
                 <ButtonMeeting :title="'Agendar una Reunión'"/>
             </div>
@@ -16,7 +16,7 @@
                 <ButtonMeeting :title="'Agendar Reunión'"/>
             </div>
             <h3 class="text-xl md:text-2xl xl:text-3xl font-semibold mt-16">Ver ruta de optimización</h3>
-            <i class="ri-arrow-down-s-line text-5xl md:text-6xl xl:text-7xl hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" @click="scrollToCertainPoint"></i>
+            <i class="beat ri-arrow-down-s-line text-5xl md:text-6xl xl:text-7xl hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" @click="scrollToCertainPoint"></i>
         </div>
     </div>
 </template>
@@ -30,6 +30,7 @@
             components: {
                 ButtonMeeting,
             },
+            
         setup(){
             const image = '@/../../../../../public/assets/fondo.png'
             let scrollElement  = document.getElementById('section1');
@@ -61,5 +62,19 @@
 
 .gradient-linear {
   background: linear-gradient(to bottom, #CC8D00B2, #FFFFFF4D);
+}
+
+@keyframes beat {
+    0%, 100% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.1);
+    }
+}
+
+/* Aplica la animación a un elemento con la clase 'beat' */
+.beat { /* Cambia el color según tu preferencia */
+    animation: beat 1s infinite; /* 1s de duración y repetición infinita */
 }
 </style>

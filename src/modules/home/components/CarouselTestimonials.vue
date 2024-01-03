@@ -1,6 +1,6 @@
 <template>
-    <div class="relative w-full max-w-[1000px] h-96 flex flex-col">
-        <div class="mx-6 lg:mx-12">
+    <div class="relative sm:w-96 mx-auto lg:w-full max-w-[1000px] h-96 flex flex-col">
+        <div class="mx-4 lg:mx-12">
             <swiper
                     :slidesPerView="numberSlides"
                     :loop="true"
@@ -13,53 +13,26 @@
                     class="mySwiper"
                     @swiper="onSwiper"
                 >
-                    <swiper-slide>                
-                        <div class=" w-full flex justify-center h-96 p-2">
-                            <div class="bg-claro w-[25rem] h-80 rounded-3xl flex flex-col justify-between px-8 pt-8 pb-6">
-
-                                <div class="text-base text-left" v-text="'Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere totam ullam ea temporibus maxime eaque sit quisquam vitae, commodi reiciendis non. Quia optio corrupti hic ab dolore quod doloremque voluptates?Quia optio corrupti hic ab dolore quod doloremque voluptates?'">
-                                </div>
-                                    
-                                <div class=" h-12 flex">
-                                    <div class="bg-oscuro h-12 w-12 rounded-2xl bg-cover bg-center" :style="{ backgroundImage: `url( ${imagen} )` }"/>
-
-                                    
-                                    <div class="flex flex-col ml-4 justify-center">
-                                        <p class="text-sm text-start font-semibold" v-text="'Nombre Apellido'"/>   
-                                        <p class="text-xs text-start" v-text="'Cargo'"/>
-                                            
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </swiper-slide>
-                    <swiper-slide>                
-                        <Card :texto="'Lorem'" :nombre="'Felepe'" :cargo="'CEO'" :imagen="imagen"/>
+                    <swiper-slide v-for="(testimonio, i) in testimonios" :key="'testimonio'+i">                
+                        <CardTestimonials :texto="testimonio.texto" :nombre="testimonio.nombre" :cargo="testimonio.cargo" :imagen="testimonio.imagen"/>
                     </swiper-slide>
 
-                    <swiper-slide>Slide 3</swiper-slide>
-                    <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-                    <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-                    <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
                     <div class="swiper-pagination"></div>
                 </swiper>
         </div>
 
-
-        <button class="absolute right-0 top-40 z-1 text-4xl text-oscuro" @click="next">
-            <i class="ri-arrow-right-s-line"></i>
-        </button>
-        <button class="absolute top-40 z-1 text-4xl text-oscuro" @click="prev">
-            <i class="ri-arrow-left-s-line"></i>
-        </button>
+            <button class="absolute -right-6 top-40 z-1 text-5xl text-oscuro" @click="next">
+                <i class="ri-arrow-right-s-line"></i>
+            </button>
+            <button class="absolute -left-6 top-40 z-1 text-5xl text-oscuro" @click="prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
     </div>
 </template>
 <script>
     // Import Swiper Vue.js components
     import { Swiper, SwiperSlide } from 'swiper/vue';
-
+    import { datosTestimonios } from './../assets/js/datosTestimonios'
     // Import Swiper styles
     import 'swiper/css';
 
@@ -72,17 +45,18 @@
 
     import { defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 
-    const Card = defineAsyncComponent(() =>
-    import('./Card.vue')
+    const CardTestimonials = defineAsyncComponent(() =>
+    import('./CardTestimonials.vue')
     );
 
     export default {
         components: {
             Swiper,
             SwiperSlide,
-            Card
+            CardTestimonials
         },
         setup() {
+            const testimonios = ref(datosTestimonios);
 
             const numberSlides = ref(1);
 
@@ -94,7 +68,7 @@
 
             const handleResize = () => {
                 const windowWidth = window.innerWidth;
-                if (windowWidth <= 768) {
+                if (windowWidth <= 976) {
                     numberSlides.value = 1
                 } else {
                     numberSlides.value = 2
@@ -129,11 +103,12 @@
                 swiperInstance?.value?.slidePrev()
             }
         return {
-                onSwiper,
-                goToSlide,
-                next,
-                prev,
-                imagen,
+            testimonios,
+            onSwiper,
+            goToSlide,
+            next,
+            prev,
+            imagen,
 
             numberSlides,
             navigation: {

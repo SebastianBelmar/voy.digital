@@ -3,13 +3,16 @@
   <NavBar  @openEvent="openSideBar" :open="mostrar"/>
     <router-view></router-view>
 
-    <div class="h-40"></div>
-  <FloatingButton />
+  <Footer />
+    <div class="w-1/2">
+      <FloatingButton />
+    </div>
 </template>
 <script setup>
 import { defineAsyncComponent, ref } from 'vue'
 const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'));
 const SideBar = defineAsyncComponent(() => import('@/components/SideBar.vue'));
+const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'));
 const FloatingButton = defineAsyncComponent(() => import('@/components/FloatingButton.vue'));
 
 const mostrar = ref(false);
