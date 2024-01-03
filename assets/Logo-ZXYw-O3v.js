@@ -1,0 +1,1 @@
+import{o as s,c as r,x as t}from"./index-s-JmZk-f.js";const c="/voy.digital/assets/logo-VgQ7ulUz.png",m={__name:"Logo",setup(a){const o=()=>{t().push({name:"welcome",params:{}})};return(e,n)=>(s(),r("img",{class:"cursor-pointer",src:c,alt:"logo",onClick:o}))}};export{m as _};
