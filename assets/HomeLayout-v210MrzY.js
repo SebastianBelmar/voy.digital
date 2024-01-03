@@ -1,0 +1,7 @@
+import{r as p,e as v,o as d,c as m,a as o,u as t,b as E,F as f,d as n,_ as a}from"./index-JUjvkyZh.js";const B={class:"w-1/2"},P={__name:"HomeLayout",setup(V){const r=n(()=>a(()=>import("./NavBar-bzdPY3Q8.js"),__vite__mapDeps([0,1,2,3,4,5,6]))),_=n(()=>a(()=>import("./SideBar-0XT4-Vq6.js"),__vite__mapDeps([7,1,2,4,5,8,3,9]))),s=n(()=>a(()=>import("./Footer-P1T2-XQw.js"),__vite__mapDeps([10,4,1,2,8]))),c=n(()=>a(()=>import("./FloatingButton-irRoKvmH.js"),__vite__mapDeps([11,1,2,12]))),e=p(!1),l=()=>{e.value=!e.value},u=()=>{e.value=!1};return(A,L)=>{const i=v("router-view");return d(),m(f,null,[o(t(_),{onCloseEvent:u,open:e.value},null,8,["open"]),o(t(r),{onOpenEvent:l,open:e.value},null,8,["open"]),o(i),o(t(s)),E("div",B,[o(t(c))])],64)}}};export{P as default};
+function __vite__mapDeps(indexes) {
+  if (!__vite__mapDeps.viteFileDeps) {
+    __vite__mapDeps.viteFileDeps = ["assets/NavBar-bzdPY3Q8.js","assets/index-JUjvkyZh.js","assets/index-uKNHXMS2.css","assets/scrollMenu-N3kOyiLQ.js","assets/Logo-OP2ufZS4.js","assets/ButtonMeeting-Yw0V1qNc.js","assets/NavBar-vOmcWfZY.css","assets/SideBar-0XT4-Vq6.js","assets/SocialNetworks-GU7u3Cup.js","assets/SideBar-iTX83jdv.css","assets/Footer-P1T2-XQw.js","assets/FloatingButton-irRoKvmH.js","assets/FloatingButton-kPmiSjmM.css"]
+  }
+  return indexes.map((i) => __vite__mapDeps.viteFileDeps[i])
+}
