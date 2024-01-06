@@ -1,22 +1,25 @@
 <template>
     <div id="section1" class="w-full flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center" :style="{ backgroundImage: `url( ${image} )` }" >
-        <div class="flex flex-col gap-8 xl:gap-12 w-full px-6 items-center py-36 md:py-44 xl:py-60 text-blanco bg-principal gradient-linear">
-            <h2 class="text-3xl md:text-4xl xl:text-6xl font-base ">Somos</h2>
+        <div class="flex flex-col gap-8 xl:gap-12 w-full px-6 items-center pt-36 pb-24 md:py-44 xl:pt-60 xl:py-44 text-blanco bg-principal gradient-linear">
+            <h2 class="text-xl md:text-2xl xl:text-3xl font-base ">Somos</h2>
 
-            <h2 class="text-5xl md:text-6xl xl:text-8xl fuente-titulo mb-4 mr-4 flex flex-col md:flex-row gap-3 justify-center items-center">
+            <h2 class="text-5xl md:text-6xl xl:text-7xl fuente-titulo mb-4 mr-4 flex flex-col md:flex-row gap-3 justify-center items-center">
                 <span>CREADORES</span>
                 <span>DIGITALES</span> 
             </h2>
 
-            <h3 class="text-;g sm:text-xl md:text-4xl xl:text-5xl font-semibold">Optimizamos tu presencia digital</h3>
-            <div class="w-80 md:hidden">
-                <ButtonMeeting :title="'Agendar una Reunión'"/>
+            <h3 class="text-lg sm:text-lg md:text-xl xl:text-2xl font-semibold">Optimizamos tu presencia digital</h3>
+            <div class="w-64 md:hidden">
+                <ButtonMeeting :title="'Agendar una Reunión'" className="'text-2xl md:text-3xl py-4 md:py-5 rounded-2xl md:rounded-4xl'"/>
             </div>
-            <div class="hidden md:flex md:w-96">
-                <ButtonMeeting :title="'Agendar Reunión'"/>
+            <div class="hidden md:flex md:w-80 overflow-hidden redondo-4xl">
+                <ButtonMeeting :title="'Agendar Reunión'" className="'text-2xl md:text-2xl py-4 md:py-5 redondo-4xl'"/>
+
             </div>
-            <h3 class="text-xl md:text-2xl xl:text-3xl font-semibold mt-16">Ver ruta de optimización</h3>
-            <i class="beat ri-arrow-down-s-line text-5xl md:text-6xl xl:text-7xl hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" @click="scrollToCertainPoint"></i>
+            <div class="flex flex-col items-center">
+                <h3 class="text-base md:text-lg xl:text-xl font-semibold mt-16">Ver ruta de optimización</h3>
+                <i class="beat ri-arrow-down-s-line text-5xl md:text-6xl xl:text-7xl hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer" @click="scrollToCertainPoint"></i>
+            </div>
         </div>
     </div>
 </template>
@@ -77,5 +80,8 @@
 /* Aplica la animación a un elemento con la clase 'beat' */
 .beat { /* Cambia el color según tu preferencia */
     animation: beat 1s infinite; /* 1s de duración y repetición infinita */
+}
+.redondo-4xl {
+    border-radius: 1.7rem;
 }
 </style>

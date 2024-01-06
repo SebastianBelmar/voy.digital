@@ -1,13 +1,14 @@
 <template>
-    <div class="relative sm:w-96 mx-auto lg:w-full max-w-[1000px] h-96 flex flex-col">
+    <div class="relative sm:w-96 mx-auto lg:w-full max-w-[1000px] h-96 flex flex-col" @mouseover="carouselStop" @mouseleave="carouselStart">
         <div class="mx-4 lg:mx-12">
             <swiper
                     :slidesPerView="numberSlides"
                     :loop="true"
                     :cssMode="true"
                     :autoplay="{
-                        delay: 2000,
+                        delay: 2500,
                         disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
                     }"
                     :pagination="pagination"
                     :mousewheel="true"
@@ -24,11 +25,11 @@
                 </swiper>
         </div>
 
-            <button class="absolute -right-6 top-40 z-1 text-5xl text-oscuro" @click="next">
+            <button class="absolute -right-6 top-40 z-1 text-5xl text-oscuro" @click="next" @mouseover="carouselStop">
                 <i class="ri-arrow-right-s-line"></i>
             </button>
-            <button class="absolute -left-6 top-40 z-1 text-5xl text-oscuro" @click="prev">
-                <i class="ri-arrow-left-s-line"></i>
+            <button class="absolute -left-6 top-40 z-1 text-5xl text-oscuro" @click="prev" @mouseover="carouselStop">
+                <i class="ri-arrow-left-s-line" @mouseover="carouselStop"></i>
             </button>
     </div>
 </template>
@@ -105,6 +106,13 @@
             // swiperInstance?.value?.slideTo(position);
                 swiperInstance?.value?.slidePrev()
             }
+
+            function carouselStop() {
+                swiperInstance.value?.autoplay?.stop()
+            }
+            function carouselStart() {
+                swiperInstance.value?.autoplay?.start();
+            }
         return {
             testimonios,
             onSwiper,
@@ -113,6 +121,9 @@
             prev,
             imagen,
 
+
+            carouselStop,
+            carouselStart,
             numberSlides,
             navigation: {
                 nextEl: ".swiper-button-next",

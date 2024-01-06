@@ -57,7 +57,7 @@
 <script setup>
 import { defineAsyncComponent } from 'vue';
 
-import image1 from '@/assets/ServiviosMarca.png'
+import image1 from '@/assets/marca.mp4'
 import image2 from '@/assets/ServiviosWeb.png'
 import image3 from '@/assets/ServiviosVideo.png'
 

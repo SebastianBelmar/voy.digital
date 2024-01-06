@@ -5,5 +5,4 @@ export const datosServicios = [
         titulo: 'Manual de Marca',
         image: './../../../../public/assets/felipe.png',
     },
-
 ]
