@@ -1,9 +1,6 @@
 <template>
   <div id="section1" class="w-full flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center relative">
-    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
-      <source :src="video" type="video/mp4">
-      Tu navegador no soporta el elemento de video.
-    </video>
+        <VideoBanner />
         <div class="flex flex-col gap-8 xl:gap-12 w-full px-6 items-center pt-36 pb-24 md:py-44 xl:pt-60 xl:py-44 text-blanco bg-principal gradient-linear z-1">
             <h2 class="text-xl md:text-2xl xl:text-3xl font-base ">Somos</h2>
 
@@ -31,12 +28,14 @@
 <script>
     import ButtonMeeting from '../../../components/ButtonMeeting.vue';
     import { scrollTarget } from '@/helpers/scrollMenu';
-    import { onMounted } from 'vue';
-    import video from '@/assets/banner.mp4'
+    import {  defineAsyncComponent, onMounted, ref } from 'vue';
+
+    const VideoBanner = defineAsyncComponent(() => import('./VideoBanner.vue'));
 
     export default {
             components: {
                 ButtonMeeting,
+                VideoBanner,
             },
             
         setup(){
@@ -53,7 +52,8 @@
                 scrollElement  = document.getElementById('section1');
             });
             return {
-                video,
+
+
 
                 scrollElement,
                 scrollTarget,
