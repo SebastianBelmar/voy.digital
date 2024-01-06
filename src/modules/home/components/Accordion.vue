@@ -1,7 +1,11 @@
 <template>
 <div class="flex flex-col items-center">
 
-    <div class="bg-principal w-full h-32 md:h-64 rounded-t-2xl overflow-hidden bg-cover bg-center z-2" :style="{ backgroundImage: `url( ${imagen} )` }">
+    <div class="bg-principal w-full h-32 md:h-64 rounded-t-2xl overflow-hidden bg-cover bg-center z-2">
+      <video autoplay muted loop class="w-full h-full object-cover">
+        <source :src="video" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
     </div>
     <div class="grid grid-cols-12 bg-fondo w-full py-4 px-1 transition-all duration-500 ease-in-out  z-2 cursor-pointer" 
         :class="{'rounded-b-2xl ' : !expandir, 'border-b-oscuro border-b' : expandir}"
@@ -40,7 +44,7 @@
 import { onMounted, ref} from "vue";
 export default {
     props: {
-        imagen: {
+        video: {
             type: String,
             required: true
         },

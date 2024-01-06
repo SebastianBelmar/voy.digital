@@ -28,7 +28,7 @@
     import ButtonMeeting from '../../../components/ButtonMeeting.vue';
     import { scrollTarget } from '@/helpers/scrollMenu';
     import { onMounted } from 'vue';
-    import image from '@/assets/fondo.png'
+    import image from '@/assets/banner.mp4'
 
     export default {
             components: {
