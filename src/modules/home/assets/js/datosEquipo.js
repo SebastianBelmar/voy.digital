@@ -1,4 +1,7 @@
 import felipe from '@/assets/felipe.png'
+import seb from '@/assets/seb.jpg'
+import marcia from '@/assets/marcia.jpg'
+import maria from '@/assets/maria.jpg'
 
 export const equipo = [
     {
@@ -7,17 +10,17 @@ export const equipo = [
         position: 'CEO'
     },
     {
-        image: felipe,
+        image: marcia,
         name: 'Marcia Cruz',
         position: 'CM'
     },
     {
-        image: felipe,
+        image: seb,
         name: 'Sebastián Belmar',
         position: 'CTO'
     },
     {
-        image: felipe,
+        image: maria,
         name: 'María Jesus',
         position: 'Creative Director'
     },
