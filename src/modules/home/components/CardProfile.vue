@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-claro flex flex-col p-3 sm:p-5 rounded-3xl">
+  <div class="w-full bg-fondo flex flex-col p-3 sm:p-5 rounded-3xl">
     <div class="w-full aspect-[9/8] rounded-2xl bg-cover bg-center" :style="{ backgroundImage: `url( ${image} )` }">
 
     </div>

@@ -1,9 +1,9 @@
 <template>
     <Transition name="close">
-        <i v-show="open" @click="emitCloseEvent" class="fixed top-0 right-0 p-3 text-3xl cursor-pointer ri-close-line z-100 md:hidden"></i>
+        <i v-show="open" @click="emitCloseEvent" class="fixed top-0 right-0 p-3 text-3xl cursor-pointer ri-close-line z-100 xl:hidden"></i>
     </Transition>
     <Transition name="menu">
-        <nav v-show="open" class="fixed flex flex-col justify-items w-80 h-[100vh] rounded-r-2xl bg-blanco z-50 md:hidden shadow-xl shadow-sombra z-200">
+        <nav v-show="open" class="fixed flex flex-col justify-items w-80 h-[100vh] rounded-r-2xl bg-blanco z-50 xl:hidden shadow-xl shadow-sombra z-200">
           <div class="h-28 w-full rounded-tr-2xl flex-shrink-0 border-fondo border-b flex justify-center items-end">
             <div class="flex  w-full items-start pl-9 pb-6">
               <div class="w-56">
@@ -21,7 +21,7 @@
           <div class="w-full flex-shrink-0">
             <div class="flex  w-full items-start pl-8">
               <div class="w-64">
-                <ButtonMeeting title="Agendar Reunión"/>
+                <ButtonMeeting title="Agendar Reunión" className="'text-2xl xl:text-3xl py-5 xl:py-8 rounded-2xl xl:rounded-3xl'"/>
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
         </nav>
     </Transition>
     <Transition name="fondo">
-        <div  v-show="open" @click="emitCloseEvent" class="bg-oscuro fixed w-full h-[100%] opacity-20 md:hidden z-10"></div>
+        <div  v-show="open" @click="emitCloseEvent" class="bg-oscuro fixed w-full h-[100%] opacity-20 xl:hidden z-10"></div>
     </Transition>
 </template>
 
@@ -58,7 +58,7 @@
 
     const handleResize = () => {
         const windowWidth = window.innerWidth;
-        if (windowWidth >= 768) {
+        if (windowWidth >= 1024) {
             emit('closeEvent');
         }
     };

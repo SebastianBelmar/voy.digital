@@ -1,16 +1,10 @@
 <template>
-    <transition>
 
-
-
-
-    </transition>
-
-    <div class="fixed bottom-0 h-28 md:h-36 w-full z-5 pointer-events-none">
-            <div class="abosulte bottom-0 h-28 md:h-36 w-full sm:w-[480px] mx-auto rounded-t-[2rem] sombra transition-all duration-700 ease-in-out z-5 " :class="{ 'translate-y-28 md:translate-y-36':  mostrar }">
-                <div class="fixed bottom-0 bg-blanco h-[7rem] md:h-36 w-full sm:w-[480px] rounded-t-[2rem] z-10 ">
+    <div class="fixed bottom-0 h-28 md:h-32 w-full z-5 pointer-events-none">
+            <div class="abosulte bottom-0 h-28 md:h-32 w-full sm:w-[480px] mx-auto rounded-t-[2rem] sombra transition-all duration-700 ease-in-out z-5 " :class="{ 'translate-y-28 md:translate-y-32':  mostrar }">
+                <div class="fixed bottom-0 bg-blanco h-[7rem] md:h-32 w-full sm:w-[480px] rounded-t-[2rem] z-10 ">
                     <div class="ancho-personalizado mx-auto my-[1.2rem] pointer-events-auto">
-                        <ButtonMeeting />
+                        <ButtonMeeting className="'text-2xl md:text-3xl py-5 md:py-6 rounded-2xl md:rounded-3xl'"/>
                     </div>
 
                 </div>
@@ -25,15 +19,35 @@
 </template>
 
 <script setup>
-import { defineAsyncComponent, ref } from 'vue';
+import { defineAsyncComponent, onMounted, onUnmounted, ref } from 'vue';
 
 const ButtonMeeting = defineAsyncComponent(() => import('@/components/ButtonMeeting.vue'));
 
 const mostrar = ref(true)
+const desactivarBoton = ref(true)
 
 const toggleButton = () => {
     mostrar.value = !mostrar.value
+    desactivarBoton.value = false
 }
+
+onMounted(() => {
+    window.addEventListener('scroll', () => {
+        if(desactivarBoton.value) {
+            if(window.scrollY>1000) {
+                mostrar.value = false
+            } else {
+                mostrar.value = true
+            }
+        }
+    })
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', () => {
+
+    })
+});
 </script>
 
 <style>

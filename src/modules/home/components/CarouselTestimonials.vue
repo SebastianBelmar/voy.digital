@@ -5,7 +5,10 @@
                     :slidesPerView="numberSlides"
                     :loop="true"
                     :cssMode="true"
-            
+                    :autoplay="{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }"
                     :pagination="pagination"
                     :mousewheel="true"
                     :keyboard="true"
@@ -41,7 +44,7 @@
 
 
     // import required modules
-    import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
+    import { Autoplay, Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
     import { defineAsyncComponent, onBeforeUnmount, onMounted, ref } from 'vue';
 
@@ -123,7 +126,7 @@
 
             },
 
-            modules: [Navigation, Pagination, Mousewheel, Keyboard],
+            modules: [Autoplay, Navigation, Pagination, Mousewheel, Keyboard],
         };
         },
     };

@@ -1,6 +1,6 @@
 <template>
-  <nav class="fixed bg-fondo w-full h-14 md:h-20 z-5">
-    <div class="flex justify-between items-center h-14 px-4 md:hidden">
+  <nav class="fixed bg-fondo w-full h-14 xl:h-20 z-5">
+    <div class="flex justify-between items-center h-14 px-4 xl:hidden">
       <Icon class="h-6"/>
       <transition>
         <i class="ri-more-2-fill text-2xl cursor-pointer "
@@ -10,7 +10,7 @@
       </transition>
     </div>
 
-    <div class="hidden md:flex h-20 justify-center">
+    <div class="hidden xl:flex h-20 justify-center">
       <div class="flex min-w-[768px] max-w-[1380px] h-20 bg-fondo">
         <div class="w-72 flex-shrink-0 flex justify-center items-center">
           <div class="w-56">

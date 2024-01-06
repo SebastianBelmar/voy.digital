@@ -3,7 +3,7 @@
 
     <div class="bg-principal w-full h-32 md:h-64 rounded-t-2xl overflow-hidden bg-cover bg-center z-2" :style="{ backgroundImage: `url( ${imagen} )` }">
     </div>
-    <div class="grid grid-cols-12 bg-claro w-full py-4 px-1 transition-all duration-500 ease-in-out  z-2 cursor-pointer" 
+    <div class="grid grid-cols-12 bg-fondo w-full py-4 px-1 transition-all duration-500 ease-in-out  z-2 cursor-pointer" 
         :class="{'rounded-b-2xl ' : !expandir, 'border-b-oscuro border-b' : expandir}"
         @click="toggle">
         <div class="col-span-2 text-4xl font-bold text-center">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div  class="w-full px-[2rem] bg-claro rounded-b-2xl transition-all duration-1000 ease-in-out h-0 -translate-y-4 overflow-hidden z-1"  :style="{ height: `${altura}`}">
+    <div  class="w-full px-[2rem] bg-fondo rounded-b-2xl transition-all duration-1000 ease-in-out h-0 -translate-y-4 overflow-hidden z-1"  :style="{ height: `${altura}`}">
         <div ref="div">
             <div class="text-xl font-bold mt-16">
                 <slot name="titulo-inferior"></slot>
