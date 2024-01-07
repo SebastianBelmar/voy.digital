@@ -1,39 +1,36 @@
-* {
-    font-family: poppins;
-}
+<template>
+  <div class="contenedor ">
+    <div class="skeleton"></div>
+  </div>
+</template>
 
-.z-1 {
-    z-index: 1;
+<script>
+export default {
+
 }
-.z-2 {
-    z-index: 2;
-}
-.z-3 {
-    z-index: 3;
-}
-.z-5 {
-    z-index: 5;
-}
-.z-100 {
-    z-index: 100;
-}
-.z-200 {
-    z-index: 200;
+</script>
+
+<style scoped>
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .skeleton {
     position: relative;
-    overflow: hidden;
 }
 .skeleton::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 100px;
+    left: 100px;
     width: 100vw;
     height: 100%;
-    background: linear-gradient(90deg, #FFB000, #ffcc5d 60%, #ffcf69 40%, #FFB000);
-
+    background: linear-gradient(90deg, #eee, #f9f9f9, #eee);
     background-color: rgba(184, 184, 184, 0.452);
     animation: skeleton 1s infinite;
 
@@ -46,3 +43,4 @@
         transform: translateX(100vw);
     }
 }
+</style>

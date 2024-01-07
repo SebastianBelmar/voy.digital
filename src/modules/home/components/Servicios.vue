@@ -61,7 +61,12 @@ import video1 from '@/assets/marca.mp4'
 import video2 from '@/assets/web.mp4'
 import video3 from '@/assets/video.mp4'
 
-
-const Accordion = defineAsyncComponent(() => import('./Accordion.vue'));
+const Accordion = defineAsyncComponent({
+    loader: () => import('./Accordion.vue'),
+    loadingComponent: 'hola',
+    delay: 1000,
+    timeout: 3000,
+    suspensible: true,
+});
 
 </script>

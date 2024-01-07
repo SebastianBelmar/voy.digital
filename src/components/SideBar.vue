@@ -21,13 +21,13 @@
           <div class="w-full flex-shrink-0">
             <div class="flex  w-full items-start pl-8">
               <div class="w-64">
-                <ButtonMeeting title="Agendar Reunión" className="'text-2xl xl:text-3xl py-5 xl:py-8 rounded-2xl xl:rounded-3xl'"/>
+                <ButtonMeeting title="Agendar Reunión" className="'fsdfds text-xl xl:text-3xl py-5 xl:py-8 rounded-2xl xl:rounded-3xl'"/>
               </div>
             </div>
           </div>
           <div class="w-full flex-shrink-0 mt-16">
             <div class="flex  w-full items-start pl-8">
-              <div class="w-64">
+              <div class="w-64 text-oscuro scale-75">
                 <SocialNetworks/>
               </div>
             </div>

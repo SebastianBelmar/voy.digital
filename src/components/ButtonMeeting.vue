@@ -15,7 +15,7 @@ const props = defineProps({
   },
   className: {
     type: String,
-    default: 'text-2xl md:text-3xl py-5 md:py-8 rounded-2xl md:rounded-3xl'
+    default: 'to-medio text-2xl md:text-3xl py-5 md:py-8 rounded-2xl md:rounded-3xl'
   }
 });
 
@@ -24,7 +24,7 @@ const enviarMensaje = () => {
   const numeroTelefono = '56965069659';
 
   // Mensaje que deseas enviar
-  const mensaje = 'Una pasa noma';
+  const mensaje = "¡Hola! 👋 Estoy interesado/a en conocer más sobre sus servicios digitales. ¿Podría proporcionarme más información y ayudarme a entender cómo podrían beneficiar a mi negocio? 🚀";
 
   // Crea el enlace de WhatsApp con el número y el mensaje
   const enlaceWhatsApp = `https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`;

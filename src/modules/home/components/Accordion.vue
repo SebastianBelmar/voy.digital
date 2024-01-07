@@ -1,8 +1,8 @@
 <template>
 <div class="flex flex-col items-center">
 
-    <div class="bg-principal w-full h-32 md:h-64 rounded-t-2xl overflow-hidden bg-cover bg-center z-2">
-      <video autoplay muted loop class="w-full h-full object-cover">
+    <div class="bg-principal w-full h-32 md:h-64 rounded-t-2xl overflow-hidden bg-cover bg-center z-1 " :class="{ 'skeleton' : !isVideoLoaded }">
+      <video ref="myVideo" autoplay muted loop class="w-full h-full object-cover z-5">
         <source :src="video" type="video/mp4">
         Tu navegador no soporta el elemento de video.
       </video>
@@ -64,8 +64,9 @@ export default {
     setup() {
         const expandir = ref(false)
         const div = ref(null) 
+        const myVideo = ref(null);
         const altura = ref('0px')
-
+        const isVideoLoaded = ref(false)
         let alto
         
         const toggle = () => {
@@ -87,6 +88,10 @@ export default {
                     expandir.value = false
                     alto = div.value.clientHeight
                 });
+
+                myVideo.value.addEventListener("loadeddata", () => {
+                    isVideoLoaded.value = true;
+                });
             }
         )
             
@@ -94,7 +99,9 @@ export default {
             expandir,
             div,
             altura,
-            toggle
+            toggle,
+            myVideo,
+            isVideoLoaded
         }
     }
 }

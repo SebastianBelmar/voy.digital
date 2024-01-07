@@ -1,7 +1,8 @@
 <template>
-  <div id="section1" class="w-full flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center relative">
+  <div id="section1" class="w-full flex flex-col items-center justify-center bg-cover bg-no-repeat bg-center bg-principal relative">
         <VideoBanner />
-        <div class="flex flex-col gap-8 xl:gap-12 w-full px-6 items-center pt-36 pb-24 md:py-44 xl:pt-60 xl:py-44 text-blanco bg-principal gradient-linear z-1">
+        <!-- <SkeletonLoader /> -->
+        <div class="flex flex-col gap-8 xl:gap-12 w-full px-6 items-center pt-36 pb-24 md:py-44 xl:pt-60 xl:py-44 text-blanco  gradient-linear z-1">
             <h2 class="text-xl md:text-2xl xl:text-3xl font-base ">Somos</h2>
 
             <h2 class="text-5xl md:text-6xl xl:text-7xl fuente-titulo mb-4 mr-4 flex flex-col md:flex-row gap-3 justify-center items-center">
@@ -26,9 +27,10 @@
 </template>
 
 <script>
-    import ButtonMeeting from '../../../components/ButtonMeeting.vue';
+    import ButtonMeeting from '@/components/ButtonMeeting.vue';
     import { scrollTarget } from '@/helpers/scrollMenu';
     import {  defineAsyncComponent, onMounted, ref } from 'vue';
+    import SkeletonLoader from '../../../components/SkeletonLoader.vue';
 
     const VideoBanner = defineAsyncComponent(() => import('./VideoBanner.vue'));
 
@@ -36,6 +38,7 @@
             components: {
                 ButtonMeeting,
                 VideoBanner,
+                SkeletonLoader,
             },
             
         setup(){
@@ -69,7 +72,7 @@
 }
 
 .gradient-linear {
-  background: linear-gradient(to bottom, #CC8D00B2, #FFFFFF4D);
+  background: linear-gradient(to bottom, #CC8D00B2, #FFFFFF4D); 
 }
 
 @keyframes beat {
@@ -88,4 +91,5 @@
 .redondo-4xl {
     border-radius: 1.7rem;
 }
+
 </style>

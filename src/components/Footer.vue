@@ -6,7 +6,7 @@
                 <div class="w-64 mt-4 lg:mt-0.5">
                     <Logo />
                 </div>
-                <div class="w-auto scale-75">
+                <div class="w-auto scale-50">
                     <social-networks/>
                 </div>
             </div>

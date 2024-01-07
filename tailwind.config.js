@@ -26,6 +26,11 @@ export default {
       'danger': '#FC3B80',
       'sombra': 'hsla(200, 40%, 25%, 0.1)'
     },
+    keyframes: {
+      shimmer: {
+        '100%' : {transform: 'translateX(100%)'}
+      }
+    },
 
     extend: {
       fontFamily: {

@@ -5,7 +5,7 @@
 
   <Footer />
     <div class="w-1/2">
-      <FloatingButton />
+      <FloatingButton/>
     </div>
 </template>
 <script setup>
