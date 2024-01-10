@@ -14,6 +14,7 @@ export default {
     },
     colors: {
       'principal': '#FFB000',
+      'boton': '#3D858F',
       'oscuro': '#004650',
       'medio': '#3D858F',
       'medio-claro': '#88BAC1',
