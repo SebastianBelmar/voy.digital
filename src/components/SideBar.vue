@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-    import { onMounted, onBeforeUnmount, ref } from 'vue';
+    import { onMounted, onBeforeUnmount, ref, defineEmits  } from 'vue';
     import Logo from '@/components/Logo.vue';
     import ButtonSideBarVue from '@/components/ButtonSideBar.vue';
     import ButtonMeeting from '@/components/ButtonMeeting.vue';
@@ -52,8 +52,7 @@
     const emit = defineEmits(['closeEvent'])
 
     const emitCloseEvent = () => {
-
-    emit('closeEvent');
+      emit('closeEvent');
     };
 
     const handleResize = () => {

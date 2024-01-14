@@ -4,7 +4,7 @@
             <div class="flex flex-nowrap transition-all duration-1000 ease-in-out" :class="{ 'slide-paused' : pausar, 'slide-left' : sentido, 'slide-right' : !sentido }" 
             v-for="i in 3" :key="'slice'+i">
                 <div class="px-4" v-for="(item, j) in datos" :key="i+'card'+j">
-                    <CardImage :image="item.image" :text="item.text"/>
+                    <CardImage @toggleEvent="openModalVideo(item.videoUrl, item.text)"  :video="item.video" :text="item.text"/>
                 </div>
             </div>
         </div>
@@ -18,33 +18,42 @@
             </div>
         </div>
     </div>
+    <Modal :open="openModal" :text="text" :video="videoYoutube" @closeModal="close"/>
+
 </template>
 
 <script>
 import { defineAsyncComponent, ref } from 'vue';
 import { items } from './../helpers/itemCarousel'
 import { datosPortafolio } from './../assets/js/datosCarouselPlay'
+import video from '@/assets/videos/Andres Maximilian.mp4'
 
 const CardImage = defineAsyncComponent(() =>
   import('./CardImage.vue')
 );
 
+const Modal = defineAsyncComponent(() => import('./ModalVideos.vue'));
+
+
 export default {
     components: {
-        CardImage // Registra el componente para usarlo en el template
+        CardImage, // Registra el componente para usarlo en el template
+        Modal
     },
     setup(){
 
         const datos = ref(datosPortafolio);
-
+        const videoYoutube = ref('')
         const image = 'https://images.unsplash.com/photo-1604311795833-25e1d5c128c6?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8OSUzQTE2fGVufDB8fDB8fHww'
-        const text = 'hola foca'
+        const text = ref('')
 
         const itemsCarousel = ref(items);
 
         const pausar = ref(false)
         const sentido = ref(false)
         let pausarBoton = true
+
+        const openModal = ref(false)
 
         const toggle = () => {
             pausar.value = !pausar.value
@@ -57,6 +66,16 @@ export default {
             }
         }
 
+        const openModalVideo = (url, texto) => {
+          openModal.value = true
+          text.value = texto
+          videoYoutube.value = url
+        }
+
+        const close = () => {
+          openModal.value = false
+        }
+
         return {
           datos,
           image,
@@ -64,9 +83,14 @@ export default {
           pausar,
           sentido,
           itemsCarousel,
+          video,
+          videoYoutube,
+          openModal,
 
           toggle,
-          activar
+          activar,
+          openModalVideo,
+          close
         }
     }
 }
@@ -92,10 +116,10 @@ export default {
 }
 
 .slide-right {
-  animation: 10s slide infinite linear;
+  animation: 15s slide infinite linear;
 }
 .slide-left {
-  animation: 10s slide-inv infinite linear;
+  animation: 15s slide-inv infinite linear;
 }
 
 .slide-paused {

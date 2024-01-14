@@ -1,5 +1,5 @@
 import felipe from '@/assets/felipe.png'
-import seb from '@/assets/seb.jpg'
+import seb from '@/assets/seb.png'
 import marcia from '@/assets/marcia.jpg'
 import maria from '@/assets/maria.jpg'
 

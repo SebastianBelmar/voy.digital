@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full bg-fondo flex flex-col p-3 sm:p-5 rounded-3xl">
-    <div class="w-full aspect-[9/8] rounded-2xl bg-cover bg-center" :style="{ backgroundImage: `url( ${image} )` }">
+  <div class="w-full bg-fondo flex flex-col p-3 sm:p-5 rounded-[2rem]">
+    <div class="w-full aspect-[9/8] rounded-3xl bg-cover bg-center" :style="{ backgroundImage: `url( ${image} )` }">
 
     </div>
     <div class="w-full mt-2 sm:mt-4 md:mt-6 md:mb-2 lg:mt-4 lg:mb-1">

@@ -17,7 +17,7 @@ const CarouselPlay = defineAsyncComponent(() => import('./CarouselPlay.vue'));
 
 export default {
     components : {
-        CarouselPlay
+        CarouselPlay,
     },
     setup(){
     
