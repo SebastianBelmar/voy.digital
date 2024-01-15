@@ -2,7 +2,7 @@ export const scrollTarget = (section) => {
     
     if(!section) return;
 
-    const offsetTop = section.offsetTop;
+    const offsetTop = section.offsetTop-80;
 
     window.scrollTo({
       top: offsetTop,
@@ -25,14 +25,14 @@ export const handleScroll = (e, active, sections) => {
         {
             if( index < 4)
             {
-              if (scrollPosition >= sections[index].offsetTop && scrollPosition < sections[index + 1].offsetTop) 
+              if (scrollPosition+80 >= sections[index].offsetTop && scrollPosition+80 < sections[index + 1].offsetTop) 
               {
                 active.value = `active${index+1}`;
               }
             } 
             else 
             {
-              if (scrollPosition >= sections[4].offsetTop) 
+              if (scrollPosition+80 >= sections[4].offsetTop) 
               {
                 active.value = 'active5';
               } 

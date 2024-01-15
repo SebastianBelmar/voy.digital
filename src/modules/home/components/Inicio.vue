@@ -5,10 +5,10 @@
         <div class="flex flex-col gap-8 xl:gap-12 w-full px-6 items-center pt-36 pb-24 md:py-44 xl:pt-60 xl:py-44 text-blanco  gradient-linear z-1">
             <h2 class="text-xl md:text-2xl xl:text-3xl font-base ">Somos</h2>
 
-            <h2 class="text-5xl md:text-6xl xl:text-7xl fuente-titulo mb-4 mr-4 flex flex-col md:flex-row gap-3 justify-center items-center">
+            <h1 class="text-5xl md:text-6xl xl:text-7xl fuente-titulo mb-4 mr-4 flex flex-col md:flex-row gap-3 justify-center items-center">
                 <span>CREADORES</span>
                 <span>DIGITALES</span> 
-            </h2>
+            </h1>
 
             <h3 class="text-lg sm:text-lg md:text-xl xl:text-2xl font-semibold">Optimizamos tu presencia digital</h3>
             <div class="w-64 md:hidden">
@@ -55,9 +55,6 @@
                 scrollElement  = document.getElementById('section1');
             });
             return {
-
-
-
                 scrollElement,
                 scrollTarget,
                 scrollToCertainPoint

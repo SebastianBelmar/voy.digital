@@ -66,10 +66,6 @@
 
             const imagen = 'https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
 
-            function onSwiper(swiper) {
-                swiperInstance.value = swiper;
-            }
-
             const handleResize = () => {
                 const windowWidth = window.innerWidth;
                 if (windowWidth <= 976) {
